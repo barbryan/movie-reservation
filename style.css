@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    transition: all .5s ease;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    scroll-behavior: smooth;
+    background: linear-gradient(45deg, black, white);
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theater {
+    width: 100vmin;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 2rem;
+}
+
+.theater .screen {
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    gap: 1rem;
+}
+
+.theater .screen .movie-image {
+    background: red;
+    box-shadow: 0 2px 8px 0;
+}
+
+.theater .screen .reservation-details ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style-type: none;
+    margin: 0;
+}
+
+.theater .screen .reservation-details ul li {
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    background: white;
+    padding: 8px 12px;
+    box-shadow: 0 2px 8px 0;
+}
+
+.theater .seats {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+    height: 20rem;
+}
+
+.theater .seats .chair {
+    border-radius: 50% 50% 0 0;
+    box-shadow: 0 2px 8px 0;
+}
+
+.not-occupied {
+    background: rgb(54, 182, 241);
+}
+
+.occupied {
+    background: white;
+}
